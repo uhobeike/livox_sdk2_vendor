@@ -40,6 +40,9 @@ build_livox_sdk2()
 
 ament_export_include_directories(include)
 
+set(LIVOX_SDK_INSTALL_DIR ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}_install)
+set(ENV{LD_LIBRARY_PATH} "$ENV{LD_LIBRARY_PATH}:${LIVOX_SDK_INSTALL_DIR}/lib")
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
