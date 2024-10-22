@@ -40,8 +40,6 @@ build_livox_sdk2()
 
 ament_export_include_directories(include)
 
-ament_export_libraries(livox_lidar_sdk_shared)
-
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   ament_lint_auto_find_test_dependencies()
